@@ -1,0 +1,149 @@
+﻿/* استيراد الخطوط */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    color: #333;
+}
+
+
+
+
+/* قسم الاتصال والخريطة */
+.contact-map {
+    margin-top: 150px;
+    padding: 50px 9%;
+    text-align: center;
+    background: white;
+}
+
+.heading {
+    font-size: 8rem;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* القسم الأيسر: معلومات الاتصال */
+.contact-section {
+    flex: 1;
+    min-width: 350px;
+}
+
+.quick-contact, .lets-connect {
+    background: #E1D8D0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+    .quick-contact h3, .lets-connect h3 {
+        font-size: 3rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+
+.info p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* نموذج الاتصال */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #9c7d48b5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .btn-primary:hover {
+        background: #9c7d48b5;
+    }
+
+/* قسم الخريطة */
+.map-section {
+    flex: 1;
+    min-width: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+
+/* //////////// Drp Down Style////////////// */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+    .dropbtn:hover {
+        color: #ff9800;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 100;
+}
+
+    .dropdown-content a, .dropdown-content .aspNetLink {
+        color: #333;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: 0.3s;
+    }
+
+        .dropdown-content a:hover, .dropdown-content .aspNetLink:hover {
+            background: #f1f1f1;
+        }
+
+/* عرض القائمة عند تمرير الماوس */
+.dropdown:hover .dropdown-content {
+    display: block;
+}

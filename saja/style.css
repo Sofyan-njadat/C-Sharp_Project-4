@@ -1,0 +1,316 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color: #443;
+    --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    --border: .2rem solid var(--main-color);
+    --border-hover: .2rem dashed var(--main-color);
+}
+
+* {
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    font-size: 9rem;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: .05rem var(--main-color);
+    letter-spacing: .2rem;
+    text-align: center;
+    pointer-events: none;
+    position: relative;
+}
+
+.heading span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: .9rem 1.5rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    color: var(--main-color);
+    background: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    border-radius: var(--border-radius-hover);
+    border: var(--border-hover);
+}
+
+/* HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 0rem 9%;
+}
+
+.header .logo {
+    color: var(--main-color);
+    font-size: 2.3rem;
+}
+
+.header .logo i {
+    padding-left: .5rem;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+.header .btn {
+    margin-top: 0;
+}
+
+#menu-btn {
+    font-size: 3rem;
+    color: var(--main-color);
+    cursor: pointer;
+    display: none;
+}
+
+.btnLogin {
+    background: #79bc79;
+}
+
+.btnRgstr {
+    background: #5BC0DE;
+}
+
+.btnClr {
+    background: #9c7d4857;
+}
+
+
+
+
+
+
+/* //////////// Drp Down Style////////////// */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+    .dropbtn:hover {
+        color: #ff9800;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 100;
+}
+
+    .dropdown-content a, .dropdown-content .aspNetLink {
+        color: #333;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: 0.3s;
+    }
+
+        .dropdown-content a:hover, .dropdown-content .aspNetLink:hover {
+            background: #f1f1f1;
+        }
+
+/* عرض القائمة عند تمرير الماوس */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+
+
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    color: var(--main-color);
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: var(--main-color);
+}
+
+.footer .box-container .box a i {
+    padding-right: .5rem;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .credit {
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    color: var(--main-color);
+}
+
+.footer .credit span {
+    border-bottom: var(--border-hover);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 3rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 6rem;
+    }
+
+    .heading span {
+        font-size: 2.3rem;
+    }
+
+    #menu-btn {
+        display: initial;
+    }
+
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a {
+        display: block;
+        font-size: 2.2rem;
+        margin: 0;
+        padding: 1.5rem 2rem;
+    }
+
+    .home {
+        text-align: center;
+    }
+
+    .home .row .content h3 {
+        font-size: 4rem;
+    }
+
+    .menu .box-container .box {
+        margin-left: 0;
+        margin-top: 6rem;
+        flex-flow: column;
+        text-align: center;
+    }
+
+    .menu .box-container .box img {
+        margin-left: 0;
+        margin-top: -6rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home .row .image img {
+        height: auto;
+        width: 100%;
+    }
+}
